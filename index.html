@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Silvan Medias - Home</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- BILD HINTERGRUND -->
+    <div class="hero-bg-container"></div>
+
+    <!-- HEADER / NAVIGATION -->
+    <header class="header">
+        <div class="nav-container">
+            <a href="index.html" class="logo-box">
+                <span class="logo-word"><span class="logo-script">S</span>ilvan</span>
+                <span class="logo-word"><span class="logo-script">M</span>edias</span>
+            </a>
+
+            <nav>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html" class="nav-link active">Home</a></li>
+                    <li><a href="projekte.html" class="nav-link">Projekte</a></li>
+                    <li class="nav-contact-item">
+                        <a href="#kontakt" class="nav-link">Kontakt</a>
+                        <a href="https://www.instagram.com/silvanmedias/" target="_blank" rel="noopener" class="nav-instagram-icon" aria-label="Instagram">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <button class="menu-toggle" id="menuToggle" aria-label="Menü öffnen" onclick="document.getElementById('navMenu').classList.toggle('mobile-active')">
+                <svg viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16" stroke-linecap="round"/></svg>
+            </button>
+        </div>
+    </header>
+
+    <!-- HAUPTINHALT HOME -->
+    <main style="max-width: 1350px; margin: 0 auto; padding: 0 2rem;">
+        
+        <!-- HERO SECTION -->
+        <section style="min-height: calc(100vh - 90px); display: flex; align-items: center;">
+            <div style="max-width: 700px; padding-top: 2rem;">
+                <h1 class="heading-lg">Video- & Fotografie</h1>
+                <p class="subtext">Professionelle Sportaufnahmen, Visuals, Editing und Webdesign.</p>
+                
+                <div class="btn-group">
+                    <a href="projekte.html" class="btn btn-primary">Projekte entdecken</a>
+                    <a href="#kontakt" class="btn btn-primary">Kontakt aufnehmen</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ANGEBOTE BEREICH -->
+        <section style="margin-top: 4rem;">
+            <div style="text-align: center; margin-bottom: 3rem;">
+                <h2 class="heading-md">Angebote</h2>
+            </div>
+
+            <div style="max-width: 650px; margin: 0 auto;">
+                <div class="card" style="text-align: center;">
+                    <h3 class="heading-md" style="font-size: 1.8rem; margin-bottom: 1rem;">Sport- und Videografie</h3>
+                    <p class="subtext" style="margin-bottom: 2rem; font-size: 1rem; line-height: 1.6;">
+                        Du möchtest, dass ich dein nächstes Match oder der deines Teams fotografiere, ist dies genau das richtige für dich.
+                    </p>
+                    <a href="https://www.instagram.com/silvanmedias/" target="_blank" rel="noopener" class="btn btn-primary" style="width: 100%; max-width: 300px;">Anfragen</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- KONTAKT-BEREICH -->
+        <section id="kontakt" style="margin-top: 8rem; padding-top: 4rem; scroll-margin-top: 90px;">
+            <div style="text-align: center; margin-bottom: 3rem;">
+                <h2 class="heading-lg">Kontakt</h2>
+                <p class="subtext">
+                    Du möchtest, dass ich dein nächstes Match fotografiere, oder hast eine andere Frage?<br>
+                    Schreib mir direkt auf Instagram oder per E-Mail!
+                </p>
+            </div>
+
+            <!-- ZENTRIERTES KONTAKT-FELD -->
+            <div style="display: flex; justify-content: center;">
+                <div class="card" style="width: 100%; max-width: 500px;">
+                    <h4 class="subtext" style="font-size: 1.2rem; font-weight: 600; margin-bottom: 1.5rem; text-align: center;">Direkter Kontakt</h4>
+                    
+                    <a href="https://www.instagram.com/silvanmedias/" target="_blank" rel="noopener" class="btn btn-secondary" style="width: 100%; justify-content: flex-start; gap: 14px; margin-bottom: 1rem;">
+                        <svg class="contact-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                        </svg>
+                        <span>Instagram</span>
+                    </a>
+
+                    <a href="mailto:mediasilvan@gmail.com" class="btn btn-secondary" style="width: 100%; justify-content: flex-start; gap: 14px;">
+                        <svg class="contact-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                            <polyline points="22,6 12,13 2,6"></polyline>
+                        </svg>
+                        <span>E-Mail</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="subtext" style="font-size: 0.95rem;">&copy; 2026 Silvan Media. Alle Rechte vorbehalten.</div>
+    </footer>
+
+</body>
+</html>

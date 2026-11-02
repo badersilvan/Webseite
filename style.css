@@ -1,0 +1,343 @@
+/* ==========================================================================
+   1. SCHRIFTARTEN (Montserrat Sans-Serif + Great Vibes für S/M mit Extra-Loops)
+   ========================================================================== */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Great+Vibes&display=swap');
+
+:root {
+    --bg-dark-gray: #0e0e12;
+    --bg-card: rgba(22, 22, 28, 0.75);
+    --bg-card-hover: rgba(30, 30, 38, 0.9);
+    
+    --text-white: #ffffff;
+    --font-montserrat: 'Montserrat', sans-serif;
+    --font-script-logo: 'Great Vibes', cursive;
+    
+    --transition-fast: all 0.2s ease;
+    --transition-smooth: all 0.35s ease;
+    --radius-btn: 50px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-montserrat);
+    font-weight: 400;
+    background-color: var(--bg-dark-gray);
+    color: var(--text-white);
+    overflow-x: hidden;
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ==========================================================================
+   2. HINTERGRUNDBILDSCHIRM
+   ========================================================================== */
+.hero-bg-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: -2;
+    overflow: hidden;
+    background: linear-gradient(to bottom, rgba(14, 14, 18, 0.2) 0%, rgba(14, 14, 18, 0.75) 80%, #0e0e12 100%), 
+                linear-gradient(to right, rgba(14, 14, 18, 0.8) 0%, rgba(14, 14, 18, 0.15) 50%, rgba(14, 14, 18, 0.8) 100%), 
+                url('Images/B-Cup-30.jpg') no-repeat center 28% / cover;
+}
+
+/* ==========================================================================
+   3. NAVIGATION & LOGO
+   ========================================================================== */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background: transparent;
+    padding: 1.5rem 2.5rem;
+}
+
+.nav-container {
+    max-width: 1350px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-box {
+    text-decoration: none;
+    color: #ffffff;
+    display: flex;
+    align-items: baseline;
+    gap: 14px;
+}
+
+.logo-word {
+    font-family: var(--font-montserrat);
+    font-size: 1.35rem;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: none;
+    display: inline-flex;
+    align-items: baseline;
+}
+
+/* Angepasst für kunstvolle Schleifen (Cursive Script Style) */
+.logo-script {
+    font-family: var(--font-script-logo);
+    font-size: 3.2rem;
+    font-weight: 400;
+    color: #ffffff;
+    line-height: 0;
+    margin-right: 2px;
+    text-shadow: 0 0 12px rgba(255, 255, 255, 0.4);
+    display: inline-block;
+    transform: translateY(4px);
+}
+
+.logo-box:hover .logo-word {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+    list-style: none;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: var(--text-white);
+    font-size: 1rem;
+    font-weight: 400;
+    transition: var(--transition-fast);
+}
+
+.nav-link:hover,
+.nav-link.active {
+    font-weight: 700;
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
+}
+
+/* Kontakt-Link nebeneinander mit transparentem Instagram-Logo */
+.nav-contact-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.nav-instagram-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 22px;
+    height: 22px;
+    color: var(--text-white);
+    transition: var(--transition-fast);
+}
+
+.nav-instagram-icon svg {
+    width: 100%;
+    height: 100%;
+    fill: none; /* Macht die Zwischenräume transparent */
+    stroke: currentColor;
+    stroke-width: 2;
+}
+
+.nav-instagram-icon:hover {
+    transform: scale(1.1);
+    opacity: 0.8;
+}
+
+.menu-toggle {
+    display: none;
+    background: transparent;
+    border: none;
+    color: var(--text-white);
+    cursor: pointer;
+}
+
+.menu-toggle svg {
+    width: 32px;
+    height: 32px;
+    stroke: currentColor;
+    stroke-width: 2;
+}
+
+/* ==========================================================================
+   4. ELEMENTE & BUTTONS
+   ========================================================================== */
+main {
+    flex: 1;
+    margin-top: 90px;
+}
+
+.badge-custom {
+    display: inline-flex;
+    align-items: center;
+    padding: 10px 24px;
+    background: radial-gradient(circle, rgba(0, 0, 0, 0.02) 0%, rgba(0, 0, 0, 0.85) 85%);
+    border: 2px solid #000000;
+    border-radius: var(--radius-btn);
+    color: var(--text-white);
+    font-size: 0.95rem;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.8);
+    margin-bottom: 1.5rem;
+}
+
+.heading-lg {
+    font-size: clamp(2.8rem, 6vw, 5rem);
+    font-weight: 700;
+    color: var(--text-white);
+    line-height: 1.1;
+    margin-bottom: 1rem;
+}
+
+.heading-md {
+    font-size: clamp(1.8rem, 3.5vw, 2.5rem);
+    font-weight: 700;
+    color: var(--text-white);
+    margin-bottom: 1rem;
+}
+
+.subtext {
+    color: var(--text-white);
+    font-size: 1.1rem;
+    opacity: 0.95;
+}
+
+.btn-group {
+    display: flex;
+    gap: 1.2rem;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 32px;
+    border-radius: var(--radius-btn);
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: var(--transition-smooth);
+    cursor: pointer;
+    border: none;
+    font-family: var(--font-montserrat);
+}
+
+.btn-primary {
+    background: #ffffff;
+    color: #0e0e12;
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px);
+    background: #e2e2e2;
+}
+
+.btn-secondary {
+    background: radial-gradient(circle, rgba(0, 0, 0, 0.02) 0%, rgba(0, 0, 0, 0.85) 85%);
+    color: var(--text-white);
+    border: 1.5px solid #000000;
+}
+
+.btn-secondary:hover {
+    transform: translateY(-3px);
+    background: radial-gradient(circle, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0.95) 85%);
+}
+
+.card {
+    background: var(--bg-card);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 2.2rem;
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    transition: var(--transition-smooth);
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    background: var(--bg-card-hover);
+    border-color: rgba(255, 255, 255, 0.25);
+}
+
+/* HOCHFORMAT PROJEKTCARD */
+.project-card-custom {
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    position: relative;
+    border-radius: 18px;
+    border: 2px solid #000000;
+    overflow: hidden;
+    width: 100%;
+    max-width: 240px;
+    aspect-ratio: 3 / 4;
+    margin: 0 auto;
+    background: linear-gradient(to bottom, rgba(14, 14, 18, 0.1) 0%, rgba(14, 14, 18, 0.85) 100%),
+                url('Images/B-Cup-30.jpg') no-repeat center top / cover;
+    background-color: #0e0e12;
+    box-shadow: inset 0 0 25px #0e0e12;
+    transition: var(--transition-smooth);
+    padding: 1.2rem;
+}
+
+.project-card-custom:hover {
+    transform: translateY(-5px);
+    border-color: rgba(255, 255, 255, 0.35);
+    box-shadow: inset 0 0 15px #0e0e12, 0 10px 25px rgba(0,0,0,0.6);
+}
+
+.contact-icon-svg {
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+}
+
+.footer {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 2.5rem 2rem;
+    margin-top: 6rem;
+    background: var(--bg-dark-gray);
+    text-align: center;
+}
+
+@media (max-width: 900px) {
+    .menu-toggle { display: block; }
+
+    .nav-menu {
+        position: fixed;
+        top: 85px;
+        left: 0;
+        width: 100%;
+        background: rgba(14, 14, 18, 0.98);
+        flex-direction: column;
+        padding: 2.5rem 1.5rem;
+        gap: 1.8rem;
+        transform: translateY(-150%);
+        transition: var(--transition-smooth);
+    }
+
+    .nav-menu.mobile-active {
+        transform: translateY(0);
+    }
+}
